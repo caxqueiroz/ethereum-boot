@@ -4,7 +4,8 @@ import org.ethereum.core.Block;
 import org.ethereum.core.TransactionReceipt;
 import org.ethereum.facade.Ethereum;
 import org.ethereum.listener.EthereumListenerAdapter;
-import org.ethereum.net.rlpx.Node;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -13,24 +14,19 @@ import java.util.List;
  */
 public class EthereumNodeListener extends EthereumListenerAdapter {
 
+    Logger logger = LoggerFactory.getLogger("ethereum-listener");
 
     private Ethereum ethereum;
-
 
     public EthereumNodeListener(Ethereum ethereum){
         this.ethereum = ethereum;
     }
 
     @Override
-    public void onNodeDiscovered(Node node) {
-        System.out.println("HOST >>>>> " + node.getHost());
-    }
-
-    @Override
     public void onBlock(Block block, List<TransactionReceipt> receipts) {
-        System.out.println("Block #" + block.getNumber());
-    }
 
+        logger.info("Block # " + block.getNumber() + " processed!!");
+    }
 
     @Override
     public void onSyncDone() {

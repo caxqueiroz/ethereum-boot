@@ -40,11 +40,18 @@
     </root>
 
     <logger level="ERROR" name="general"/>
-    <logger level="INFO" name="net"/>
-    <logger level="OFF" name="wire"/>
-
+    <logger level="ERROR" name="net"/>
+    <logger level="ERROR" name="wire"/>
     <logger level="INFO" name="sync"/>
-    <logger level="INFO" name="blockqueue"/>
+    <logger level="ERROR" name="VM"/>
+    <logger level="ERROR" name="blockchain"/>
+    <logger level="ERROR" name="wallet"/>
+    <logger level="ERROR" name="gas"/>
+    <logger level="ERROR" name="repository"/>
+    <logger level="ERROR" name="state"/>
+    <logger level="ERROR" name="facade"/>
+    <logger level="ERROR" name="execute"/>
+    <logger level="ERROR" name="blockqueue"/>
 
 
 </configuration>

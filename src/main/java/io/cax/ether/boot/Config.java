@@ -1,6 +1,5 @@
-package io.cax.ether.boot.config;
+package io.cax.ether.boot;
 
-import io.cax.ether.boot.EthereumNode;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
